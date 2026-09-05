@@ -22,6 +22,8 @@ https://github.com/COSMICAL-CONTAINER/zcode-wakatime
 4. 完成后提醒我重启 ZCode 会话生效
 ```
 
+> **Windows 提示**：如果安装后每次触发钩子会闪黑色命令行框，把钩子里的 `"command": "python"` 换成 `"command": "pythonw"`（或 pythonw.exe 的完整路径）即可——pythonw 是无控制台版本，效果完全相同。
+
 > 前置：本机装过任意 WakaTime 编辑器插件（`~/.wakatime/` 下有 wakatime-cli、`~/.wakatime.cfg` 里有 key）。没装过的话先在 VSCode 里装个 WakaTime 插件并登录一次。
 
 ## 方式二：ZCode 插件市场（人类点击流）
