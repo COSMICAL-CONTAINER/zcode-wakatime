@@ -1,0 +1,22 @@
+{
+  "name": "zcode-wakatime",
+  "version": "1.0.0",
+  "description": "Track ZCode usage time in WakaTime: sends heartbeats on UserPromptSubmit and PostToolUse via wakatime-cli, attributed to the current working directory's project.",
+  "description_i18n": {
+    "en": "Track ZCode usage time in WakaTime: sends heartbeats on UserPromptSubmit and PostToolUse via wakatime-cli, attributed to the current working directory's project.",
+    "zh-CN": "把 ZCode 的使用时长计入 WakaTime：在提交提示词与工具调用后自动发心跳，按工作目录归属项目。ZCode 没有官方 WakaTime 插件，本插件补上这块。"
+  },
+  "author": {
+    "name": "COSMICAL-CONTAINER",
+    "url": "https://github.com/COSMICAL-CONTAINER"
+  },
+  "license": "MIT",
+  "keywords": [
+    "wakatime",
+    "time-tracking",
+    "hooks",
+    "zcode",
+    "glm",
+    "productivity"
+  ]
+}

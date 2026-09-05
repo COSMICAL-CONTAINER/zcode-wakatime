@@ -1,0 +1,35 @@
+{
+  "description": "Send WakaTime heartbeats for ZCode usage (UserPromptSubmit + PostToolUse, 120s per-project throttle inside the script).",
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "process",
+            "command": "python",
+            "args": [
+              "${ZCODE_PLUGIN_ROOT}/zcode_wakatime_hook.py"
+            ],
+            "timeoutMs": 5000,
+            "statusMessage": "WakaTime 心跳"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "hooks": [
+          {
+            "type": "process",
+            "command": "python",
+            "args": [
+              "${ZCODE_PLUGIN_ROOT}/zcode_wakatime_hook.py"
+            ],
+            "timeoutMs": 5000,
+            "statusMessage": "WakaTime 心跳"
+          }
+        ]
+      }
+    ]
+  }
+}

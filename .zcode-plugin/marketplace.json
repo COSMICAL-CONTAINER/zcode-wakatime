@@ -1,0 +1,14 @@
+{
+  "name": "cosmical-container-plugins",
+  "owner": {
+    "name": "COSMICAL-CONTAINER"
+  },
+  "plugins": [
+    {
+      "name": "zcode-wakatime",
+      "version": "1.0.0",
+      "description": "Track ZCode usage time in WakaTime (ZCode 没有官方 WakaTime 插件，本插件补上)",
+      "source": "."
+    }
+  ]
+}
