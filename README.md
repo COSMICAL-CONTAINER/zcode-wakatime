@@ -1,8 +1,8 @@
 # zcode-wakatime · 让 WakaTime 统计 ZCode 使用时长
 
-[ZCode](https://zcode.z.ai)（Z.ai 的 GLM 氛围编程工具）**没有官方 WakaTime 插件**——你在 ZCode 里干活的时间，WakaTime 完全统计不到（AI 分析页能看到 GLM 的 token 消耗，但那是另一条日志解析管道，不计时长）。
+[WakaTime](https://wakatime.com) 是最受程序员欢迎的编程时长统计服务：在编辑器里装一个插件，它就自动统计你每天写代码的时间、语言、项目分布，生成日报、周报和年度总结。它官方支持 30+ 编辑器和 IDE——VSCode、JetBrains 全家桶、Neovim、Visual Studio……
 
-本插件用 ZCode 钩子补上这块：每次提交提示词、每次工具调用后自动发 WakaTime 心跳，使用时长按工作目录归属项目，与 VSCode 插件并存不冲突。单文件、零第三方依赖（仅 Python 标准库）、Windows/Linux/macOS 通用。
+但支持列表里**没有 ZCode**（Z.ai 的 GLM 氛围编程工具）。你在 ZCode 里干活的时间，WakaTime 完全统计不到——AI 分析页虽然能看到 GLM 的 token 消耗，但那是另一条日志解析管道，不计时长。**本项目就是为补上这块空白而来的**：用 ZCode 钩子实现 WakaTime 插件，每次提交提示词、每次工具调用后自动发心跳，使用时长按工作目录归属项目，与 VSCode 插件并存不冲突。单文件、零第三方依赖（仅 Python 标准库）、Windows/Linux/macOS 通用。
 
 ## 一键安装（推荐：直接丢给 ZCode 里的 GLM）
 
@@ -46,7 +46,7 @@ https://github.com/COSMICAL-CONTAINER/zcode-wakatime
 ```
 zcode_wakatime_hook.py        钩子脚本（单文件，仅 Python 标准库）
 hooks/hooks.json              钩子声明
-.zcode-plugin/plugin.json     ZCode 插件清单（为将来上架预留）
+.zcode-plugin/plugin.json     ZCode 插件清单（官方插件市场开放上架后，将第一时间打包提交）
 ```
 
 ## 隐私
