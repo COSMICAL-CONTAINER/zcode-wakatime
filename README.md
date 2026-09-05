@@ -26,11 +26,7 @@ https://github.com/COSMICAL-CONTAINER/zcode-wakatime
 
 > 前置：本机装过任意 WakaTime 编辑器插件（`~/.wakatime/` 下有 wakatime-cli、`~/.wakatime.cfg` 里有 key）。没装过的话先在 VSCode 里装个 WakaTime 插件并登录一次。
 
-## 方式二：ZCode 插件市场（人类点击流）
-
-本仓库同时是一个单插件市场。在 ZCode 里：**Settings → Plugin Management → Discover → 点 `+` → 粘贴仓库地址** `https://github.com/COSMICAL-CONTAINER/zcode-wakatime` → 安装 **zcode-wakatime**。安装即生效，无需改任何配置。
-
-## 方式三：手动安装
+## 方式二：手动安装
 
 见上一节"一键安装"里的步骤 2-3，用编辑器改 `~/.zcode/cli/config.json` 即可；或把 README 直接丢给任何 AI 编码工具照做。
 
@@ -49,9 +45,8 @@ https://github.com/COSMICAL-CONTAINER/zcode-wakatime
 
 ```
 zcode_wakatime_hook.py        钩子脚本（单文件，仅 Python 标准库）
-hooks/hooks.json              钩子声明（插件安装方式使用）
-.zcode-plugin/plugin.json     ZCode 插件清单
-.zcode-plugin/marketplace.json 单插件市场清单（本仓库即市场）
+hooks/hooks.json              钩子声明
+.zcode-plugin/plugin.json     ZCode 插件清单（为将来上架预留）
 ```
 
 ## 隐私
