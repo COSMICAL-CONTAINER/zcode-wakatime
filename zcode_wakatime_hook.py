@@ -68,7 +68,9 @@ def send(cli, project, epoch):
     ]
     flags = 0
     if os.name == "nt":
-        flags = subprocess.DETACHED_PROCESS | subprocess.CREATE_NO_WINDOW
+        # 仅用 CREATE_NO_WINDOW：若加 DETACHED_PROCESS，wakatime-cli 会彻底失去控制台，
+        # 其内部探测系统版本的 "cmd ver" 子进程将新开一个可见控制台 → 黑框闪烁
+        flags = subprocess.CREATE_NO_WINDOW
     subprocess.Popen(
         args,
         stdout=subprocess.DEVNULL,
