@@ -40,6 +40,10 @@ def find_cli():
 
 def read_cwd():
     """从 stdin 的钩子 JSON / 环境变量 / 当前目录里取项目目录。"""
+    try:
+        sys.stdin.reconfigure(encoding="utf-8", errors="replace")  # pythonw 下管道默认编码非 UTF-8，中文路径需显式指定
+    except Exception:
+        pass
     raw = sys.stdin.read() if not sys.stdin.isatty() else ""
     for source in (
         (json.loads(raw).get("cwd") if raw.strip() else None),
