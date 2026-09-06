@@ -18,7 +18,7 @@ import time
 
 HOME = os.path.expanduser("~")
 STATE_DIR = os.path.join(HOME, ".wakatime", "zcode-wakatime")
-THROTTLE_SECONDS = 120
+THROTTLE_SECONDS = 60  # WakaTime 时长分组超时为 2 分钟，120s 节流会在空档处截断时长；60s 保证链条连续
 PLUGIN = "zcode-wakatime/1.0.0"
 
 CLI_CANDIDATES = [

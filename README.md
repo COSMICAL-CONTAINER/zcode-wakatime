@@ -33,7 +33,7 @@ https://github.com/COSMICAL-CONTAINER/zcode-wakatime
 ## 工作原理
 
 - 钩子（`hooks/hooks.json`）在 UserPromptSubmit / PostToolUse 触发脚本；脚本读取事件 JSON 里的 `cwd` 作为项目目录
-- 同一项目 **120 秒节流**（WakaTime 插件标准行为），状态存于 `~/.wakatime/zcode-wakatime/` 的 marker 文件 mtime，无内容写入
+- 同一项目 **60 秒**内只发一条心跳（WakaTime 的时长分组超时为 2 分钟，节流贴近该值可避免 AI 长任务空档截断累计），状态存于 `~/.wakatime/zcode-wakatime/` 的 marker 文件 mtime，无内容写入
 - 以**分离进程**调用 `wakatime-cli --entity ZCode --entity-type app --project <目录名> --category coding`，钩子毫秒级返回，不阻塞会话
 - 断网自动走 wakatime-cli 离线队列，联网补发
 
